@@ -3,6 +3,7 @@
 // distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using System.Diagnostics;
+using System.Globalization;
 using System.Reflection;
 using CommandLine;
 using CommandLine.Text;
@@ -35,6 +36,7 @@ public static class Program
 
     private static void Main(string[] args)
     {
+        CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
         Parser parser = new(p => p.HelpWriter = null);
         ParserResult<Arguments> parserResult = parser.ParseArguments<Arguments>(args);
         _ = parserResult
