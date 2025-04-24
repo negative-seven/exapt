@@ -27,7 +27,7 @@ public static class Program
         [Option(
             'e',
             "exapunks-directory",
-            HelpText = "A path to the root directory of the 2022-10-13 Windows version of Exapunks",
+            HelpText = "A path to the root directory of the 2022-10-13 version of Exapunks",
             Required = true
         )]
         public required string ExapunksDirectory { get; set; }
