@@ -74,8 +74,14 @@ internal static class Utils
     {
         string originalDirectory = Directory.GetCurrentDirectory();
         Directory.SetCurrentDirectory(directory);
-        T returnValue = func();
-        Directory.SetCurrentDirectory(originalDirectory);
-        return returnValue;
+        try
+        {
+            T returnValue = func();
+            return returnValue;
+        }
+        finally
+        {
+            Directory.SetCurrentDirectory(originalDirectory);
+        }
     }
 }
