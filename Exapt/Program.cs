@@ -81,6 +81,10 @@ public static class Program
                 : null;
         };
 
+        // apply patches before doing any initialization
+        HarmonyLib.Harmony harmony = new(nameof(Program));
+        harmony.PatchAll(Assembly.GetExecutingAssembly());
+
         Wrappers.Meta.Globals.ExapunksDirectory = exapunksDirectory;
         Wrappers.Globals.SetRandom(new Wrappers.Random(1));
         Wrappers.Strings.Initialize();
@@ -100,10 +104,6 @@ public static class Program
         }
         Wrappers.GameLogic.Instance.InitializeFontsA(() => { });
         Wrappers.GameLogic.Instance.InitializeFontsB();
-
-        // patch out steam calls (this loads the classes from SteamPatch.cs)
-        HarmonyLib.Harmony harmony = new(nameof(Program));
-        harmony.PatchAll(Assembly.GetExecutingAssembly());
     }
 
     public static SolutionData Simulate(string solutionFile)
