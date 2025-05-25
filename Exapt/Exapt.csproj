@@ -1,5 +1,5 @@
 ﻿<!--
-    Copyright (C) 2024 negative_seven
+    Copyright (C) 2024 The exapt authors
     This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not
     distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
 -->
@@ -9,7 +9,6 @@
         <TargetFramework>net8.0</TargetFramework>
         <PlatformTarget>x64</PlatformTarget>
         <Version>0.1.0</Version>
-        <Company>negative_seven</Company>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>

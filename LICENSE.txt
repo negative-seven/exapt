@@ -1,4 +1,4 @@
-Copyright (C) 2024 negative_seven
+Copyright (C) 2024 The exapt authors
 
 Mozilla Public License Version 2.0
 ==================================
