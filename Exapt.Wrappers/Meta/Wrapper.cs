@@ -59,9 +59,9 @@ public class Wrapper<T>
 
     private static Type? GetWrappedType()
     {
-        ClassWrapperAttribute? classWrapperAttribute = typeof(T).GetCustomAttribute<ClassWrapperAttribute>();
+        TypeWrapperAttribute? classWrapperAttribute = typeof(T).GetCustomAttribute<TypeWrapperAttribute>();
         return classWrapperAttribute is not null
-            ? Type.GetType($"{classWrapperAttribute.InnerClassName}, Burbank")
+            ? Type.GetType($"{classWrapperAttribute.InnerTypeName}, Burbank")
             : null;
     }
 

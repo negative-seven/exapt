@@ -6,7 +6,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("SimEntity")]
+[TypeWrapper("SimEntity")]
 public class SimEntity : NonStaticWrapper<SimEntity>
 {
     public Team Team => (Team)Get("#=qIHmbDpVt_8Yx9pkwE2i5bQ==")!;

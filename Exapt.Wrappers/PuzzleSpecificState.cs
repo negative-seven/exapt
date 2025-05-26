@@ -7,7 +7,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("#=qwCVetOJ8d2dzLv7iF5FKO0$IyhevGyzpxoCo3cuHWMg=")]
+[TypeWrapper("#=qwCVetOJ8d2dzLv7iF5FKO0$IyhevGyzpxoCo3cuHWMg=")]
 public class PuzzleSpecificState : NonStaticWrapper<PuzzleSpecificState>
 {
     internal PuzzleSpecificState(object inner)
@@ -26,7 +26,7 @@ public class PuzzleSpecificState : NonStaticWrapper<PuzzleSpecificState>
     }
 }
 
-[ClassWrapper("SpecialPuzzleLogics+#=q1jrxtBuiTtOGmDnxQ5uXzg==")]
+[TypeWrapper("SpecialPuzzleLogics+#=q1jrxtBuiTtOGmDnxQ5uXzg==")]
 public class LeftArmSpecificState : NonStaticWrapper<LeftArmSpecificState>
 {
     public IEnumerable<object> OutputValues =>
@@ -36,7 +36,7 @@ public class LeftArmSpecificState : NonStaticWrapper<LeftArmSpecificState>
         : base(inner) { }
 }
 
-[ClassWrapper("SpecialPuzzleLogics+ArcadeGet")]
+[TypeWrapper("SpecialPuzzleLogics+ArcadeGet")]
 public class SawayamaWonderdiscSpecialState : NonStaticWrapper<SawayamaWonderdiscSpecialState>
 {
     public ReadOnlyCollection<bool> OutputMatches => ((List<bool>)Get("#=qUa63$IPg1OR89eclcOlolw==")!).AsReadOnly();

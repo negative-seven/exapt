@@ -6,5 +6,5 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("ReliableRandom")]
+[TypeWrapper("ReliableRandom")]
 public class Random(ulong seed) : NonStaticWrapper<Random>(CallConstructor(seed)!) { }

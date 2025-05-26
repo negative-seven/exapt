@@ -7,9 +7,9 @@ using System.Diagnostics;
 namespace Exapt.Wrappers.Meta;
 
 [AttributeUsage(AttributeTargets.Class)]
-internal sealed class ClassWrapperAttribute(string innerClassName) : Attribute
+internal sealed class TypeWrapperAttribute(string innerTypeName) : Attribute
 {
-    public string InnerClassName { get; private set; } = innerClassName;
+    public string InnerTypeName { get; private set; } = innerTypeName;
 }
 
 [AttributeUsage(AttributeTargets.Method)]

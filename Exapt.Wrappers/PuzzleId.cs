@@ -6,7 +6,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("Puzzle")]
+[TypeWrapper("Puzzle")]
 public class PuzzleId : NonStaticWrapper<PuzzleId>
 {
     public string Id => (string)Get("ID")!;

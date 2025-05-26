@@ -6,7 +6,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("Solution")]
+[TypeWrapper("Solution")]
 public class Solution : NonStaticWrapper<Solution>
 {
     public PuzzleId PuzzleId => new(Call("#=q0bXK6vTpnQXmi0XWqqn0yA==")!);

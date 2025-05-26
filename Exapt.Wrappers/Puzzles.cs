@@ -7,7 +7,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("Puzzles")]
+[TypeWrapper("Puzzles")]
 public class Puzzles : StaticWrapper<Puzzles>
 {
     private static bool initialized = false;

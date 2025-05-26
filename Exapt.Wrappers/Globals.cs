@@ -7,7 +7,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("#=q$O9G2KbklYQ6FwBlZ$EShQ==")]
+[TypeWrapper("#=q$O9G2KbklYQ6FwBlZ$EShQ==")]
 public class Globals : StaticWrapper<Globals>
 {
     public static void SetRandom([NotNull] Random random)

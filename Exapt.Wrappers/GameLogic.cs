@@ -7,7 +7,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("GameLogic")]
+[TypeWrapper("GameLogic")]
 public class GameLogic : NonStaticWrapper<GameLogic>
 {
     [DisallowNull]

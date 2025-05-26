@@ -9,7 +9,7 @@ using HarmonyLib;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("Sim")]
+[TypeWrapper("Sim")]
 public class Simulation : NonStaticWrapper<Simulation>
 {
     public bool Completed => InnerGetCompleted(Inner);

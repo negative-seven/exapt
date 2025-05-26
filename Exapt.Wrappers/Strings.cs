@@ -6,7 +6,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("#=q$q_5RIWNSfdbsTA5NIdJHA==")]
+[TypeWrapper("#=q$q_5RIWNSfdbsTA5NIdJHA==")]
 public class Strings : StaticWrapper<Strings>
 {
     private static bool initialized = false;

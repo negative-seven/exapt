@@ -6,7 +6,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-[ClassWrapper("Renderer")]
+[TypeWrapper("Renderer")]
 public class Renderer : StaticWrapper<Renderer>
 {
     public static void Initialize(RendererType type, bool debugMode)
