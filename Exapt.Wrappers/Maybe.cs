@@ -6,9 +6,9 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-internal sealed class Maybe : NonStaticWrapper<Maybe>
+internal sealed class MaybeSolution : NonStaticWrapper<MaybeSolution>
 {
-    internal Maybe(object inner)
+    internal MaybeSolution(object inner)
         : base(inner) { }
 
     public bool IsSome()

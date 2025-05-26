@@ -27,7 +27,7 @@ public class Solution : NonStaticWrapper<Solution>
 
     public static Solution? FromFile(string filename)
     {
-        Maybe solution = new(CallStatic("#=qrAtvddUJvCjJyuYaeXTtoA==", filename)!);
+        MaybeSolution solution = new(CallStatic("#=qrAtvddUJvCjJyuYaeXTtoA==", filename)!);
         return solution.IsSome() ? new Solution(solution.Unwrap()) : null;
     }
 }
