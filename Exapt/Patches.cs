@@ -43,7 +43,7 @@ internal static class PatchReadonlyGlobals
 
     public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
     {
-        List<CodeInstruction> codes = new(instructions);
+        List<CodeInstruction> codes = [.. instructions];
         FieldInfo? targetField = Type.GetType("#=qD_usaxHu0XL9_OQn7XltrQ==, Burbank")!
             .GetField("#=q2OFH6JrUOETgdwoCqXZcwfL0QOKQKOpwpwsnPngDHwo=");
         ArgumentNullException.ThrowIfNull(targetField);

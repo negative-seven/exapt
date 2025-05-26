@@ -10,7 +10,7 @@ public class Simulation
 
     public bool Completed => inner.Completed;
     public int Cycles => inner.Cycles;
-    public int CodeSize => solution.Exas.Select(e => Wrappers.Simulation.CountCodeSize(e.Code)).Sum();
+    public int CodeSize => solution.Exas.Sum(e => Wrappers.Simulation.CountCodeSize(e.Code));
     public int Activity => inner.Activity;
 
     private readonly Wrappers.Simulation inner;
@@ -19,8 +19,10 @@ public class Simulation
     {
         this.solution = solution;
 
-        Dictionary<Wrappers.Team, IEnumerable<Wrappers.SolutionExa>> solutionExas =
-            new() { { Wrappers.Team.Player, solution.Exas } };
+        Dictionary<Wrappers.Team, IEnumerable<Wrappers.SolutionExa>> solutionExas = new()
+        {
+            { Wrappers.Team.Player, solution.Exas },
+        };
         inner = Wrappers.Simulation.Create(
             Wrappers.Puzzles.FromId(new Wrappers.PuzzleId(solution.PuzzleId)),
             testIndex,

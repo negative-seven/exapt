@@ -52,7 +52,7 @@ internal static class Utils
     internal static object? CallConstructor(Type type, params object[] arguments)
     {
         ConstructorInfo constructor =
-            type.GetConstructor(arguments.Select(a => a.GetType()).ToArray())
+            type.GetConstructor([.. arguments.Select(a => a.GetType())])
             ?? throw new FindMemberException($@"Failed to find constructor for type ""${type.AssemblyQualifiedName}""");
         return constructor.Invoke(BindingFlags.DoNotWrapExceptions, null, arguments, null);
     }
