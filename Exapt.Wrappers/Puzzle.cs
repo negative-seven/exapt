@@ -6,6 +6,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
+[TypeWrapper("#=qy6MHvbWPHjr3Tio5l$8zZoJ2dxYJ5411QCT6P9bbbfY=")]
 public class Puzzle : NonStaticWrapper<Puzzle>
 {
     internal Puzzle(object inner)

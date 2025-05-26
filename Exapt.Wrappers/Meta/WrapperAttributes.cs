@@ -9,7 +9,11 @@ namespace Exapt.Wrappers.Meta;
 [AttributeUsage(AttributeTargets.Class)]
 internal sealed class TypeWrapperAttribute(string innerTypeName) : Attribute
 {
-    public string InnerTypeName { get; private set; } = innerTypeName;
+    public string InnerTypeName { get; } = innerTypeName;
+
+    public Type InnerType { get; } =
+        Type.GetType($"{innerTypeName}, Burbank")
+        ?? throw new FindMemberException($@"Failed to find type ""{innerTypeName}"" in assembly ""Burbank""");
 }
 
 [AttributeUsage(AttributeTargets.Method)]

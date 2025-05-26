@@ -61,8 +61,8 @@ public class Wrapper<T>
     {
         TypeWrapperAttribute? classWrapperAttribute = typeof(T).GetCustomAttribute<TypeWrapperAttribute>();
         return classWrapperAttribute is not null
-            ? Type.GetType($"{classWrapperAttribute.InnerTypeName}, Burbank")
-            : null;
+            ? classWrapperAttribute.InnerType
+            : throw new MissingAttributeException($"Missing {nameof(TypeWrapperAttribute)} on {typeof(T).FullName}");
     }
 
     protected static object? GetStatic(string fieldName)

@@ -6,6 +6,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
+[TypeWrapper("Maybe`1[[Solution, Burbank]]")]
 internal sealed class MaybeSolution : NonStaticWrapper<MaybeSolution>
 {
     internal MaybeSolution(object inner)

@@ -6,6 +6,7 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
+[TypeWrapper("SolutionExa")]
 public class SolutionExa : NonStaticWrapper<SolutionExa>
 {
     public IEnumerable<Instruction> Code
