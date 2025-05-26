@@ -6,8 +6,9 @@ using Exapt.Wrappers.Meta;
 
 namespace Exapt.Wrappers;
 
-public class Code : NonStaticWrapper<Code>
+[TypeWrapper("Instruction")]
+public class Instruction : NonStaticWrapper<Instruction>
 {
-    internal Code(object inner)
+    internal Instruction(object inner)
         : base(inner) { }
 }

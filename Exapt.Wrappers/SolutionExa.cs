@@ -8,14 +8,16 @@ namespace Exapt.Wrappers;
 
 public class SolutionExa : NonStaticWrapper<SolutionExa>
 {
-    public Code Code
+    public IEnumerable<Instruction> Code
     {
         get
         {
             object a = Get("#=qspUergJPSYLfh2YdnSsRQ0oECwKCGjIWlINxFjteWhs=")!;
             object b = Utils.Get(a, "#=qm2WdvgSYgJdwJfJhUUVLTA==")!;
-            object c = Utils.Get(b, "#=qxVFmzYr3PSpuzJKbb9hW3g==")!;
-            return new Code(c);
+            IEnumerable<object> c = (
+                (System.Collections.IEnumerable)Utils.Get(b, "#=qxVFmzYr3PSpuzJKbb9hW3g==")!
+            ).Cast<object>();
+            return c.Select(c => new Instruction(c));
         }
     }
 

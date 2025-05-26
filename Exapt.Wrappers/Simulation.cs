@@ -66,9 +66,17 @@ public class Simulation : NonStaticWrapper<Simulation>
         _ = InnerStep(Inner);
     }
 
-    public static int CountCodeSize([NotNull] Code code)
+    public static int CountCodeSize([NotNull] IEnumerable<Instruction> code)
     {
-        return (int)CallStatic("#=q$bzjuqpJ4$1ZnJopcCnGHikwx30NyLQHmmR$fALl5MA=", code.Inner)!;
+        object castedCodeEnumerable = typeof(Enumerable)
+            .GetMethod("Cast")!
+            .MakeGenericMethod([Instruction.WrappedType])
+            .Invoke(null, [code.Select(i => i.Inner)])!;
+        object castedCode = typeof(Enumerable)
+            .GetMethod("ToList")!
+            .MakeGenericMethod([Instruction.WrappedType])
+            .Invoke(null, [castedCodeEnumerable])!;
+        return (int)CallStatic("#=q$bzjuqpJ4$1ZnJopcCnGHikwx30NyLQHmmR$fALl5MA=", castedCode)!;
     }
 
     [MethodWrapper("#=q9jlSbij7xzD7a5JTreHwgSlOVHw2c6NutHpXBargYEs=")]
